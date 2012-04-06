@@ -20,37 +20,37 @@ Deploy Codex to Heroku
 
 Clone the codex repo:
 
-```  $ git clone 
+``` $ git clone 
 
 Add all files to a new Git repo:
 
-```  $ git init .
-```  $ git add -A
-```  $ git commit -m "Initial commit"
+``` $ git init .
+``` $ git add -A
+``` $ git commit -m "Initial commit"
 
 Create a new Heroku application:
 
-```  $ heroku create yourappname
+``` $ heroku create yourappname
 
 Add the shared-database addon to your application:
 
-```  $ heroku addons:add shared-database    
+``` $ heroku addons:add shared-database    
 
 Add environment variables for your username and password:
 
-```  $ heroku config:add ADMIN_USER=username
-```  $ heroku config:add ADMIN_PASS=t0psecret
+``` $ heroku config:add ADMIN_USER=username
+``` $ heroku config:add ADMIN_PASS=t0psecret
   
 Push the master Git branch to Heroku:
 
-```  $ git push heroku master
+``` $ git push heroku master
   
 Run the setup command in rake:
 
-```  $ heroku rake setup
+``` $ heroku rake setup
   
 Open your new Codex:
 
-```  $ heroku open
+``` $ heroku open
   
 Enjoy!
