@@ -1,3 +1,7 @@
 body {
 	background: #ffffff url('/img/paper.png') repeat;
 }
+
+blockquote {
+	border-left: 5px solid #007dcc;
+}
