@@ -5,7 +5,9 @@
   <p><strong>Include in sidebar?</strong> <input type="checkbox" name="sidebar" value="yes" <% if(@page.sidebar == :yes) %>checked<% end %> ></p>
   
   <br>
+  <row>
   <input type="submit" value="Save" class="btn btn-primary">
   <a href="/<%= @page.slug %>/" class="btn">Cancel</a>
   <% if(@page.slug != 'home') %><p class="pull-right" style="margin-right:20px;"><a href="/<%= @page.slug %>/delete"><span class="btn btn-danger">Delete</span></a></p><% end %>
+  </row>
 </form>

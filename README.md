@@ -1,9 +1,19 @@
 Codex - Simple Single-User Reference Database
 =============================================
 
-**Codex is a simple single-user notes database written in Ruby.** Codex uses Sinatra and Datamapper to create, save, update, and delete page records from a simple Postgres database.
+**Codex is a simple single-user notes database written in Ruby.** Codex uses [Sinatra](http://www.sinatrarb.com/) and [Datamapper](http://datamapper.org/) to create, save, update, and delete page records from a simple Postgres database. The application is ready for dead-simple deployment on [Heroku](http://www.heroku.com/).
 
-Markdown formatting is enabled for all pages, which makes it easy to write complex pages with simple markup.
+[Markdown](http://daringfireball.net/projects/markdown/basics) formatting is enabled for all pages, which makes it easy to write complex pages with simple markup. [HTTP authentication](http://www.sinatrarb.com/faq.html#auth) and [forced SSL](https://github.com/tobmatth/rack-ssl-enforcer) for all traffic keeps your information secure. [Bootstrap](http://twitter.github.com/bootstrap/) styling makes your pages look clean and attractive.
+
+History
+-------
+
+Codex was developed for two reasons:
+
+1. **It's useful.** If you need a simple reference database for business or personal use, Codex is a good fit. It's simple, free, and inexpensive to maintain. (At present, Heroku's basic plan is free and has more than enough power to run Codex.)
+2. **It's educational.** The code at the heart of Codex contains all of the major concepts in CRUD-style application development: connecting to the database, creating records, updating records, and deleting records. It's also a good illustration of various data types, conditionals, helpers, and methods.
+
+I developed Codex as one of my first exercises in Ruby web application development. I also use it in production.
 
 
 Deploy Codex to Heroku

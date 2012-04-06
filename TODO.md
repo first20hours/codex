@@ -6,7 +6,7 @@ TODO
 
 DONE
 ====
-
++ Force SSL connections (rack-ssl-enforcer)
 + Enable Heroku hosting
 + Add markdown-to-html conversion on content pages
 + Add license (MIT)
