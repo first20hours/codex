@@ -26,9 +26,6 @@ class Page
 end
 
 DataMapper.finalize
-DataMapper.auto_upgrade!
-
-enable :sessions
 
 # Authentication
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
