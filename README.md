@@ -1,7 +1,7 @@
 Codex - Simple Single-User Reference Database
 =============================================
 
-![Codex](https://media.eurekaoverdrive.com/img/screenshot.png)
+![Codex](http://media.eurekaoverdrive.com/img/screenshot.png)
 
 **Codex is a simple single-user notes database written in Ruby.** Codex uses [Sinatra](http://www.sinatrarb.com/) and [Datamapper](http://datamapper.org/) to create, save, update, and delete page records from a simple Postgres database. The application is ready for immediate deployment on [Heroku](http://www.heroku.com/).
 
