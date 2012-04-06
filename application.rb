@@ -32,11 +32,6 @@ DataMapper.finalize
 NAV_TITLE = 'Home'
 FOOTER = '<em>"Not everything that is more difficult is more meritorious."</em> - <strong>Thomas Aquinas</strong>'
 
-# Added headers for Varnish
-before do
-  response.headers['Cache-Control'] = 'public, max-age=31556926' # 1 year
-end
-
 # Authentication
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
   [username, password] == [ENV['ADMIN_USER'], ENV['ADMIN_PASS']]
