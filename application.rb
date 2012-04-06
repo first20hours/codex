@@ -10,6 +10,7 @@ require 'dm-core'
 require 'dm-validations'
 require 'dm-types'
 require 'dm-migrations'
+require 'dm-postgres-adapter'
 require 'rdiscount'
 require 'shotgun'
 

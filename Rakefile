@@ -4,6 +4,7 @@ require 'dm-core'
 require 'dm-validations'
 require 'dm-types'
 require 'dm-migrations'
+require 'dm-postgres-adapter'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/database.db")
 
