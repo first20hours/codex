@@ -15,9 +15,6 @@ GEM
     dm-postgres-adapter (1.2.0)
       dm-do-adapter (~> 1.2.0)
       do_postgres (~> 0.10.6)
-    dm-sqlite-adapter (1.2.0)
-      dm-do-adapter (~> 1.2.0)
-      do_sqlite3 (~> 0.10.6)
     dm-types (1.2.1)
       bcrypt-ruby (~> 3.0.0)
       dm-core (~> 1.2.0)
@@ -29,8 +26,6 @@ GEM
     dm-validations (1.2.0)
       dm-core (~> 1.2.0)
     do_postgres (0.10.8)
-      data_objects (= 0.10.8)
-    do_sqlite3 (0.10.8)
       data_objects (= 0.10.8)
     fastercsv (1.5.4)
     heroku (2.22.0)
@@ -47,11 +42,11 @@ GEM
     rack (1.4.0)
     rack-protection (1.2.0)
       rack
+    rack-ssl-enforcer (0.2.4)
     rdiscount (1.6.8)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rubyzip (0.9.6.1)
-    sequel (3.31.0)
     sinatra (1.3.2)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
@@ -70,12 +65,11 @@ DEPENDENCIES
   dm-core
   dm-migrations
   dm-postgres-adapter
-  dm-sqlite-adapter
   dm-types
   dm-validations
   heroku
   rack
+  rack-ssl-enforcer
   rdiscount
-  sequel
   sinatra
   sinatra-flash

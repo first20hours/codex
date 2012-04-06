@@ -12,6 +12,7 @@ require 'dm-types'
 require 'dm-migrations'
 require 'dm-postgres-adapter'
 require 'rdiscount'
+require 'rack-ssl-enforcer'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/database.db")
 
@@ -31,6 +32,9 @@ DataMapper.finalize
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
   [username, password] == [ENV['ADMIN_USER'], ENV['ADMIN_PASS']]
 end
+
+# Force all connections to use SSL
+use Rack::SslEnforcer
 
 # Converts page name into post slug
 def slugify(content)
