@@ -42,10 +42,6 @@ get '/' do
   redirect '/home/'
 end
 
-# Sets title in nav bar to Home page title
-@nav = Page.first(:slug => 'home')
-NAV_TITLE = @nav.title
-
 # Creates new note from "new page" form
 post '/' do
   if params[:userinput].empty?
