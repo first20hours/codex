@@ -1,6 +1,7 @@
 TODO
 ====
-+ Fix button alignment on edit / delete page
++ Fix button alignment on edit / delete page (inputs vs. links)
++ Drag-and-drop sorting in the sidebar and on the "all" page
 
 DONE
 ====
