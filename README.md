@@ -3,7 +3,7 @@ Codex: A Simple Single-User Reference Web Application
 
 ![Codex](http://media.eurekaoverdrive.com/img/screenshot.png)
 
-**Codex is a simple single-user notes database written in Ruby.** Codex uses [Sinatra](http://www.sinatrarb.com/) and [Datamapper](http://datamapper.org/) to create, save, update, and delete page records from a simple Postgres database. The application is ready for immediate deployment on [Heroku](http://www.heroku.com/).
+**Codex is a simple single-user reference web application written in Ruby.** Codex uses [Sinatra](http://www.sinatrarb.com/) and [Datamapper](http://datamapper.org/) to create, save, update, and delete page records from a simple Postgres database. The application is ready for immediate deployment on [Heroku](http://www.heroku.com/).
 
 [Markdown](http://daringfireball.net/projects/markdown/basics) formatting is enabled for all pages, which makes it easy to write complex pages with simple markup. [HTTP authentication](http://www.sinatrarb.com/faq.html#auth) and [forced SSL](https://github.com/tobmatth/rack-ssl-enforcer) for all traffic keeps your information secure. [Bootstrap](http://twitter.github.com/bootstrap/) styling makes your pages look clean and attractive.
 
