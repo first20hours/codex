@@ -12,7 +12,6 @@ require 'dm-types'
 require 'dm-migrations'
 require 'dm-postgres-adapter'
 require 'rdiscount'
-require 'shotgun'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/database.db")
 
