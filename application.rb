@@ -29,7 +29,7 @@ end
 DataMapper.finalize
 
 # Global variables
-NAV_TITLE = 'Main'
+NAV_TITLE = 'Home'
 FOOTER = '<em>"Not everything that is more difficult is more meritorious."</em> - <strong>Thomas Aquinas</strong>'
 
 # Authentication
