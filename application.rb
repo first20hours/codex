@@ -122,8 +122,3 @@ not_found do
   flash[:notice] = "Requested page not found!"
   redirect '/home/'
 end
-
-# Unauthorized
-error 401 do
-  erb :unauthorized
-end
