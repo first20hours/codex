@@ -68,6 +68,7 @@ end
 
 # Displays requested note
 get '/:url/' do
+  @nav.title = Page.title.first(:slug => 'home')
   @page = Page.first(:slug => params[:url])
   if @page == nil
     flash[:notice] = "Requested page not found!"
