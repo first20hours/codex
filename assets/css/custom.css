@@ -5,3 +5,25 @@ body {
 blockquote {
 	border-left: 5px solid #007dcc;
 }
+
+div.content {margin-top:80px;}
+
+div.main {margin-right:-20px;}
+
+h1, h2, h3, h4, h5 {margin-bottom:20px;}
+
+/* Text block styles */
+
+.blue {	background-image:none;background-color:#fdf5d9;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);padding:14px;border-color:#fceec1;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;margin-right:30px;color:#404040;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#ddf4fb;border-color:#c6edf9;
+}
+
+.red {	background-image:none;background-color:#fdf5d9;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);padding:14px;border-color:#fceec1;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;margin-right:30px;color:#404040;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#fddfde;border-color:#fbc7c6;
+}
+
+.green {	background-image:none;background-color:#fdf5d9;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);padding:14px;border-color:#fceec1;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;margin-right:30px;color:#404040;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#d1eed1;border-color:#bfe7bf;
+}
+
+.yellow {	background-image:none;background-color:#fdf5d9;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);padding:14px;border-color:#fceec1;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;margin-right:30px;color:#404040;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#fdf5d9;border-color:#bfe7bf;
+}
+
+.blue, .red, .green, .yellow a {color:#404040;}
