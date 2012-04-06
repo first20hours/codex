@@ -30,7 +30,7 @@ DataMapper.finalize
 
 # Global variables
 NAV_TITLE = 'Main'
-FOOTER = '\<em>Not everything that is more difficult is more meritorious.\</em> - \<strong>Thomas Aquinas\</strong>'
+FOOTER = '<em>"Not everything that is more difficult is more meritorious."</em> - <strong>Thomas Aquinas</strong>'
 
 # Authentication
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
