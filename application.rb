@@ -68,7 +68,7 @@ end
 
 # Displays requested note
 get '/:url/' do
-  @nav.title = Page.title.first(:slug => 'home')
+  @nav = Page.first(:slug => 'home')
   @page = Page.first(:slug => params[:url])
   if @page == nil
     flash[:notice] = "Requested page not found!"
@@ -82,6 +82,7 @@ end
 
 # Edits requested note
 get '/:url/edit' do
+  @nav = Page.first(:slug => 'home')
   @page = Page.first(:slug => params[:url])
   @sidebars = Page.all(:sidebar => 'yes')
   erb :edit
@@ -104,6 +105,7 @@ end
 
 # Readies requested note for deletion
 get '/:url/delete' do
+  @nav = Page.first(:slug => 'home')
   @page = Page.first(:slug => params[:url])
   @pages = Page.all
   @sidebars = Page.all(:sidebar => 'yes')
