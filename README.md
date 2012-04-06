@@ -1,5 +1,5 @@
-Codex: A Simple Single-User Reference Database
-==============================================
+Codex: A Simple Single-User Reference Web Application
+=====================================================
 
 ![Codex](http://media.eurekaoverdrive.com/img/screenshot.png)
 
