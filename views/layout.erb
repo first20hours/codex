@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Codex</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/css/bootstrap-responsive.css" type="text/css" media="screen, projection">
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-alert.js"></script>
+
+    <style type="text/css">
+
+	div.content {margin-top:80px;}
+	
+	h1, h2, h3, h4, h5 {margin-bottom:20px;}
+	
+	/* Text block styles */
+
+	.blue {	background-image:none;background-color:#fdf5d9;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);padding:14px;border-color:#fceec1;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;margin-right:30px;color:#404040;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#ddf4fb;border-color:#c6edf9;
+	}
+	
+	.red {	background-image:none;background-color:#fdf5d9;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);padding:14px;border-color:#fceec1;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;margin-right:30px;color:#404040;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#fddfde;border-color:#fbc7c6;
+	}
+	
+	.green {	background-image:none;background-color:#fdf5d9;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);padding:14px;border-color:#fceec1;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;margin-right:30px;color:#404040;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#d1eed1;border-color:#bfe7bf;
+	}
+	
+	.yellow {	background-image:none;background-color:#fdf5d9;filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);padding:14px;border-color:#fceec1;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;margin-right:30px;color:#404040;text-shadow:0 1px 0 rgba(255, 255, 255, 0.5);background-color:#fdf5d9;border-color:#bfe7bf;
+	}
+	
+	.blue, .red, .green, .yellow a {color:#404040;}
+    </style>
+
+	<!-- Insert Javascript calls -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+		$(document).ready(function() {
+			$(".alert-message").alert()
+		});
+	/* ]]> */
+	</script>
+
+  </head>
+
+  <body>
+	
+	<div class="navbar navbar-fixed-top">
+	      <div class="navbar-inner">
+	        <div class="container">
+	          <a class="brand" href="/">Codex</a>
+	          <div class="nav">
+	            <ul class="nav">
+	              <li><a href="/">Home</a></li>
+	              <li><a href="/all/">List all pages</a></li>
+	            </ul>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+    <div class="container">
+
+      <div class="content">
+        <div class="row">
+          <div class="span8">
+			 <% if @page.title == nil %>
+				<h1>Edit this page...</h1>
+			  <% else %>
+	          <h1><%= @page.title %><a href="/all/" class="btn pull-right" style="margin-top:5px;margin-right:27px;">List all pages</a></h1>
+			  <% end %>
+            <%= yield %>
+          </div>
+          <div class="span3">
+            
+            <form action="/" method="post"> 
+            <input class="input-small" type="text" name="userinput" placeholder="page title" default="newpage">
+            <input type="submit" class="btn info" value="New Page">
+            </form>
+			
+			<hr />
+
+            <% if @sidebars == nil %>
+            <p>No pages in sidebar!</p>
+            <% else %>
+			<h4>Sidebar</h4>
+            <% @sidebars.each do |page| %>
+            <p><a href="/<%= page.slug %>/"><%= page.title %></a><p>
+            <% end %>
+            <% end %>
+            
+            <hr />
+            
+            <a href="http://daringfireball.net/projects/markdown/basics" target="_blank"><img src="/img/markdown-mark.png" border="0" class="pull-left" /></a>
+            <h4>&nbsp;Formatting</h4>
+            <p><code>#</code> Header 1</p>
+            <p><code>##</code> Header 2</p>
+            <p><code>###</code> Header 3</p>
+            <p><code>**Text**</code> Bold</p>
+            <p><code>_Text_</code> Emphasis</p>
+			<p><code>></code> Quotation</p>
+            <p><code>[Link](http...)</code> Link</p>
+            <p><code>![Alt text](/path/img.jpg)</code> Image</p>
+			<p><code>+</code> Bullet List</p>
+			<p><code>#</code> Numbered List</p>
+            <p><code>- - -</code> Horizontal Divider</p>
+			<p><code>div class="yellow"</code> Yellow Block</p>
+			<p><code>div class="blue"</code> Blue Block</p>
+			<p><code>div class="green"</code> Green Block</p>
+			<p><code>div class="red"</code> Red Block</p>
+			<br />
+			<p><a href="http://daringfireball.net/projects/markdown/basics" target="_blank">More formatting...</a></p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>This is the footer.</p>
+      </footer>
+
+    </div><!--/.container-->
+
+  </body>
+</html>

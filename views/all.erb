@@ -1,0 +1,9 @@
+<% if @pages == nil %>
+<p>No Pages!</p>
+<% else %>
+<ul>
+<% @pages.each do |page| %>
+<li><a href="/<%= page.slug %>/"><%= page.title %></a></li>
+<% end %>
+</ul>
+<% end %>

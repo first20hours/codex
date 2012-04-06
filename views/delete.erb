@@ -1,0 +1,11 @@
+<% if @page %>
+  <p>Are you sure you want to delete the following note: <strong>"<%= @page.title %>"</strong>?</p>
+  <br />
+  <form action="/<%= @page.slug %>/" method="post">
+    <input type="hidden" name="_method" value="delete"> 
+    <input type="submit" value="Confirm Delete" class="btn btn-danger">
+    <a href="/<%= @page.slug %>/" class="btn">Cancel</a>
+  </form>
+<% else %>
+  <p>Page not found.</p>
+<% end %>

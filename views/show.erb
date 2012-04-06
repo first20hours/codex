@@ -1,0 +1,41 @@
+<% if @page.slug == nil %>
+	
+	<% if flash[:error] != nil %>
+		<div class="alert fade in">
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
+			<%= flash[:error] %>
+		</div>
+	<% end %>
+	
+	<% if flash[:notice] != nil %>
+		<div class="alert fade in">
+			<a class="close" data-dismiss="alert" href="#">&times;</a>
+  			<%= flash[:notice] %>
+		</div>
+	<% end %>
+	
+	<p><a href="/<%= @page.slug %>/edit">Edit this page</a> to add content.</p>
+	
+<% else %>
+	
+	<% if flash[:notice] != nil %>
+	<div class="alert fade in">
+		<a class="close" data-dismiss="alert" href="#">&times;</a>
+  		<%= flash[:notice] %>
+	</div>
+	<% end %>
+	
+	<%= @page.content %>
+	
+<% end %>
+
+
+<% unless @page.content == nil %>
+<hr>
+<h6>Last updated: <%= @page.last_updated.strftime("%A, %b %d, %Y at %I:%M%p") %></h6>
+<% end %>
+
+<hr />
+
+<p class="pull-left" style="margin-right:20px;"><a href="/<%= @page.slug %>/edit"><span class="btn btn-primary">Edit</span></a></p>
+<p class="pull-right" style="margin-right:20px;"><a href="/<%= @page.slug %>/delete"><span class="btn btn-danger">Delete</span></a></p>

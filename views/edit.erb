@@ -1,0 +1,11 @@
+<form action="/<%= @page.slug %>/edit" method="POST">
+  <label>Page Title</label>
+  <p><textarea name="title" class="span3 small"><%= @page.title %></textarea></p>
+  <p><textarea name="content" class="span8" rows="16"><%= @page.content %></textarea></p>
+  <p><strong>Include in sidebar?</strong> <input type="checkbox" name="sidebar" value="yes" <% if(@page.sidebar == :yes) %>checked<% end %> ></p>
+  
+  <br>
+  <input type="submit" value="Save" class="btn btn-primary">
+  <a href="/<%= @page.slug %>/" class="btn">Cancel</a>
+  <p class="pull-right" style="margin-right:20px;"><a href="/<%= @page.slug %>/delete"><span class="btn btn-danger">Delete</span></a></p>
+</form>
